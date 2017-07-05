@@ -306,11 +306,13 @@
 	
 * Set PreAuthorize anotation pada Rest Controller (AlamatController.java):
 	
+	```java
 	@PreAuthorize("hasAuthority('Operator')")
 	@RequestMapping(value="/alamat", method=RequestMethod.GET)
 	public Page<Alamat> daftarAlamat(Pageable page){
 		return ad.findAll(page);
 	}
+	```
 	
 * Authentication menggunakan implicit add script ke method configure(ClientDetailsServiceConfigurer clients) 
 	di class OAuth2Configuration.java pada project auth-server
@@ -323,9 +325,9 @@
 				.authorities("Operator")
 				.accessTokenValiditySeconds(600)
 	```
-* get token use url : http://localhost:10000/oauth/authorize?client_id=hciimp&response_type=token&redirect_uri=http://example.com
+* get token use url : http://localhost:10000/oauth/authorize?client_id=hciimp&response_type=token&redirect_uri=http://example.com<br />
 	result : http://example.com/#access_token=d494b6f1-a1c2-418e-84e0-6c47edd1e643&token_type=bearer&expires_in=599&scope=alamat
 	
-* check token langsung ke halaman api/alamat
-	http://localhost:8080/api/alamat?access_token=d494b6f1-a1c2-418e-84e0-6c47edd1e643
+* check token langsung ke halaman api/alamat<br />
+	http://localhost:8080/api/alamat?access_token=d494b6f1-a1c2-418e-84e0-6c47edd1e643<br />
 	result berupa json format
