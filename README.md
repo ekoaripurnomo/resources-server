@@ -1,9 +1,13 @@
-* Create Resources Server
+# Resources Server
 * open start.spring.io
 * Generate SpringBoot Project use dependency web, jpa, thymleaf, lombok, mysqlcon
 * persiapan memidahkan file java yang lalu ke resources server
-* create package id.co.hanoman.latihan.resources.server, id.co.hanoman.latihan.resources.server.dao, id.co.hanoman.latihan.resources.server.controller
-	id.co.hanoman.latihan.resources.server.entity, id.co.hanoman.latihan.resources.server.config
+* create package <br />
+	id.co.hanoman.latihan.resources.server, <br />
+	id.co.hanoman.latihan.resources.server.dao, <br />
+	id.co.hanoman.latihan.resources.server.controller, <br />
+	id.co.hanoman.latihan.resources.server.entity, <br />
+	id.co.hanoman.latihan.resources.server.config
 	
 * create Alamat.java di package id.co.hanoman.latihan.resources.server.entity
 
